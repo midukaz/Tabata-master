@@ -1,0 +1,41 @@
+import { StyleSheet, Text, View } from 'react-native';
+import {TouchableOpacity } from 'react-native';
+
+const Button = ({labelButton, onpress}) => {
+    return(
+        <View style={styles.button}>
+            <TouchableOpacity
+                onPress={onpress}
+            >
+                <Text>{labelButton}</Text> 
+            </TouchableOpacity>
+        </View>
+    )
+}
+
+
+export default Button
+
+const styles = StyleSheet.create({
+   button: {
+      backgroundColor: '#00dd99',
+    //   width: 350,
+    //   height: 45,
+    //   flexDirection:'row',
+    //   flex:1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginHorizontal: 20,
+        borderRadius: 40,
+        paddingVertical: 60,
+        paddingHorizontal: 140,
+        borderColor: 'green',
+        borderWidth: 5,
+        marginBottom: 15,
+
+    },
+    labelButton:{
+        fontSize:30,
+        fontWeight:'bold'
+    }
+  });
