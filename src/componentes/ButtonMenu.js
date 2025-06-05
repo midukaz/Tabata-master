@@ -1,25 +1,20 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, View ,Image,TouchableOpacity} from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
 import FabButton from './Menu/FabButton';
+import ExerciseList from './ExerciseList';
 
-
-
-export default function App(){
-    return(
-        <View style={styles.container}>
-            <FabButton/>
-        </View>
+export default function ButtonMenu() {
+    return (
+        <SafeAreaView style={styles.container}>
+            <ExerciseList />
+            <FabButton />
+        </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
-    container:{
-        flex:1,
-     
-        backgroundColor: '#FFF'
-    },
-    text:{
-        fontSize: 25,
-        fontWeight: 'bold'
+    container: {
+        flex: 1,
+        backgroundColor: '#121212'
     }
 });

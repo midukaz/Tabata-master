@@ -1,18 +1,19 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, View ,Image,TouchableOpacity} from 'react-native';
-import ButtonSobre from './Configuração/ButtonSobre';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
+import ConfigOptions from './ConfigOptions';
 
-export default function(){
-    const msg = () => {
-        alert('versão 1.0.1');
-    }
+export default function ButtonConfig() {
     return (
-        <View>
-
-        <ButtonSobre title="Sobre" onpress={msg} />
-        
-        
-        </View>
-    )
+        <SafeAreaView style={styles.container}>
+            <ConfigOptions />
+        </SafeAreaView>
+    );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#121212'
+    }
+});
 

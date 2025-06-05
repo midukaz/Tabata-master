@@ -1,38 +1,32 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, View ,Image,TouchableOpacity, Button, Alert} from 'react-native';
-import ButtonComecar from './Home/ButtonComecar';
-import ButtonDescanso from './Home/ButtonDescanso';
-import ButtonExercicios from './Home/ButtonExercicios';
-import ButtonPreparacao from './Home/ButtonPreparacao';
+import { SafeAreaView, StyleSheet, View, Text } from 'react-native';
+import TimerDisplay from './TimerDisplay';
+import TimerControls from './TimerControls';
+import TabataSettings from './TabataSettings';
+import DailyExercises from './DailyExercises';
 
-export default function(){
-    const signIn = () => {
-        alert('cliques');
-    }
-    
-    return(
-        <View style={styles.container}>
-            
-            <ButtonPreparacao labelButton="Preparaçao" onpress={signIn} />
-
-            <ButtonExercicios labelButton="Exercícios" onpress={signIn} />
-                        
-            <ButtonDescanso labelButton="Descanso" onpress={signIn} />
-
-            <ButtonComecar labelButton="Começar" onpress={signIn} />
-        </View>
-    );
+export default function ButtonHome() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <View style={styles.content}>
+        <TimerDisplay />
+        <TimerControls />
+        <DailyExercises />
+        <TabataSettings />
+      </View>
+    </SafeAreaView>
+  );
 }
+
 const styles = StyleSheet.create({
-    container:{
-        flex:1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#121212'
-    
-    },
-    text:{
-        fontSize: 25,
-        fontWeight: 'bold'
-    }
+  container: {
+    flex: 1,
+    backgroundColor: '#121212'
+  },
+  content: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+  },
 });
